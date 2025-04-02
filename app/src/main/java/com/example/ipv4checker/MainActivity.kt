@@ -14,8 +14,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 fun main() {
-    println(ipv4Checker("233.15.0.0"))
+
 }
 
 
