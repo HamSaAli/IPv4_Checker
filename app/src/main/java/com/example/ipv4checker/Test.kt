@@ -74,7 +74,7 @@ fun main(){
     )
 
     test(
-        name="Test 12 - when IPv4 contains consecutive dots should return false",
+        name="Test 13 - when IPv4 contains consecutive dots should return false",
         result=ipv4Checker("255..255.255.255"),
         correctResult= false
     )
