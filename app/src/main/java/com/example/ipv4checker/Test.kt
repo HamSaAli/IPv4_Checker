@@ -79,6 +79,48 @@ fun main(){
         correctResult= false
     )
 
+    test(
+        name="Test 14 - when IPv4 contains dots only should return false",
+        result=ipv4Checker("...."),
+        correctResult= false
+    )
+
+    test(
+        name="Test 15 - when IPv4 without dots should return false",
+        result=ipv4Checker("192168011"),
+        correctResult= false
+    )
+
+    test(
+        name="Test 16 - when IPv4 have space in middle should return false",
+        result=ipv4Checker("192.16 8.0.1"),
+        correctResult= false
+    )
+
+    test(
+        name="Test 17 - when IPv4 start and end with space should return false",
+        result=ipv4Checker(" 192.168.1.1 "),
+        correctResult= false
+    )
+
+    test(
+        name="Test 18 - when IPv4 dot at beginning should return false",
+        result=ipv4Checker(".192.168.1.1"),
+        correctResult= false
+    )
+
+    test(
+        name="Test 19 - when IPv4 dot at end should return false",
+        result=ipv4Checker("192.168.1.1."),
+        correctResult= false
+    )
+
+    test(
+        name="Test 20 - when IPv4 segment is a float value should return false",
+        result=ipv4Checker("192.168.5.1.1."),
+        correctResult= false
+    )
+
 }
 fun test(name: String, result:Boolean, correctResult:Boolean){
     if (result == correctResult){
